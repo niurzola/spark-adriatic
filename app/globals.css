@@ -54,8 +54,8 @@
 }
 
 :root {
-  --background: #272757;
-  --foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #111111;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -93,8 +93,8 @@
 }
 
 .dark {
-  --background: #0f0e47;
-  --foreground: #ffffff;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -141,4 +141,33 @@
   html {
     @apply font-sans;
   }
+}
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  min-height: 100vh;
+
+  /* Subtle radial glow like the Next.js docs */
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -10%,
+    rgba(120, 120, 120, 0.15),
+    transparent
+  );
+}
+
+/* Dark mode glow is slightly more visible */
+html.dark body {
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -10%,
+    rgba(200, 200, 200, 0.07),
+    transparent
+  );
 }
