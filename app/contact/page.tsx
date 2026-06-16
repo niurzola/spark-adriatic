@@ -32,9 +32,7 @@ export default function ContactPage() {
       );
       setStatus("success");
       setForm({ firstName: "", lastName: "", email: "", message: "" });
-    } catch (error: any) {
-      console.log("EmailJS error:", error);
-      console.log("Error text:", error?.text);
+    } catch (error) {
       setStatus("error");
     }
   };
