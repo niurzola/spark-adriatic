@@ -8,7 +8,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-export function Topbar() {
+export default function Navbar() {
   return (
     <nav className="border-b px-6 py-3 flex items-center">
       <Link href="/">
@@ -24,7 +24,7 @@ export function Topbar() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={`navigationMenuTriggerStyle() px-6 py-3 text-lg`}
             >
               <Link href="/">Home</Link>
             </NavigationMenuLink>
@@ -32,7 +32,7 @@ export function Topbar() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={`navigationMenuTriggerStyle() px-6 py-3 text-lg`}
             >
               <Link href="/about">About</Link>
             </NavigationMenuLink>
@@ -40,7 +40,15 @@ export function Topbar() {
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
+              className={`navigationMenuTriggerStyle() px-6 py-3 text-lg`}
+            >
+              <Link href="/careers">Careers</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              asChild
+              className={`navigationMenuTriggerStyle() px-6 py-3 text-lg`}
             >
               <Link href="/contact">Contact</Link>
             </NavigationMenuLink>
